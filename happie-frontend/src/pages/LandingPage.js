@@ -5,6 +5,10 @@ import peersupport from "../assets/peer-support.svg";
 import resourcelibrary from "../assets/resource-library.svg";
 import spiralarrow from "../assets/spiral-pointer-down.svg";
 import techqueen from "../assets/tech-queen.svg";
+import howitworks1 from "../assets/how-it-works1.svg";
+import howitworks2 from "../assets/how-it-works2.svg";
+import howitworks3 from "../assets/how-it-works3.svg";
+import bulletlist from "../assets/black-bullet-list.svg";
 import Footer from "../components/footer.js";
 
 function LandingPage() {
@@ -19,15 +23,16 @@ function LandingPage() {
       </nav>
 
       {/* section 1 */}
-      <section className="bg-[url('./assets/hero-image.svg')] bg-cover bg-center h-[45.938rem] px-14 flex justify-center text-center">
-        <div className="text-white">
+      <section className="bg-[url('./assets/hero-image.svg')] bg-cover bg-center h-[45.938rem] px-14 flex justify-center text-center relative">
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="text-white z-10">
           <h1 className="text-[5rem] leading-[96px] font-bold mb-2 mt-[18.75rem]">
             Be a happie techie
           </h1>
           <p className="text-4xl leading-[57.6px] font-normal">
             Track your well-being, avoid burnout, and thrive in tech.
           </p>
-          <div className=" gap-6 mt-14 text-white text-[1.375rem] flex justify-center">
+          <div className="gap-6 mt-14 text-white text-[1.375rem] flex justify-center">
             <button className="px-16 py-5 rounded-[100px] bg-[#8600C9]">
               Get Started
             </button>
@@ -109,9 +114,64 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* section 3 */}
-      <section className="mt-48 mb-20 mx-11 py-[30px]">
-        <h3 className="font-bold text-5xl text-center">How it works</h3>
+      {/* How it works section */}
+      <section className="mt-48 mb-20 mx-11 py-[1.875rem]">
+        <h3 className="font-bold text-5xl text-center mb-[3.313rem]">
+          How it works
+        </h3>
+        <div className="flex gap-[3.75rem]">
+          <div className="flex gap-4">
+            <img src={howitworks1} alt="how it works" />
+            <div className="flex gap-4 flex-col">
+              <img src={howitworks3} alt="how it works" />
+              <img src={howitworks2} alt="how it works" />
+            </div>
+          </div>
+          <div className="mt-[1.875rem]">
+            <div className="flex items-center gap-[7.125rem]">
+              <div className="flex gap-6">
+                <img src={bulletlist} alt="bullet list" />
+                <p className="text-[2rem] text-[#2E2E2E]">Sign up</p>
+              </div>
+              <div className="flex gap-[1.875rem] items-center">
+                <div className="h-[10.75rem] w-[1px] bg-[#8E8E93]"></div>
+                <p className="max-w-[30rem] text-[#8E8E93] text-[2rem]">
+                  Join our community with just a few clicks. Create your free
+                  account, and you’re ready to begin your mental wellness
+                  journey.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-[1.688rem] mt-[2.5rem]">
+              <div className="flex gap-6">
+                <img src={bulletlist} alt="bullet list" />
+                <p className="text-[2rem] text-[#2E2E2E]">Check in daily</p>
+              </div>
+              <div className="flex gap-[1.875rem] items-center">
+                <div className="h-[10.75rem] w-[1px] bg-[#8E8E93]"></div>
+                <p className="max-w-[30rem] text-[#8E8E93] text-[2rem]">
+                  Spend less than a minute each day checking in with yourself.
+                  Track your mood, energy levels, and stress with quick, simple
+                  prompts.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-[3.438rem] mt-[2.5rem]">
+              <div className="flex gap-6">
+                <img src={bulletlist} alt="bullet list" />
+                <p className="text-[2rem] text-[#2E2E2E]">Get support</p>
+              </div>
+              <div className="flex gap-[1.875rem] items-center">
+                <div className="h-[10.75rem] w-[1px] bg-[#8E8E93]"></div>
+                <p className="max-w-[30rem] text-[#8E8E93] text-[2rem]">
+                  With insights from your check-ins, explore mindfulness
+                  exercises, break-timers, and peer support whenever you need
+                  it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* footer */}
